@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stick Man Game</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="css/stick.css">
+</head>
+<body>
+    <div class="all">
+        <div class="title">
+            <input id="checkbox_toggle" type="checkbox" class="check" onchange="DarkMode()">
+            <div class="checkbox">
+              <label class="slide" for="checkbox_toggle">
+                <label class="toggle" for="checkbox_toggle"></label>
+                <label class="text" for="checkbox_toggle">Light</label>
+                <label class="text" for="checkbox_toggle">Dark</label>
+              </label>
+            </div>
+            <h1>Stick Man Game</h1>
+            <div class="btn-container">
+	
+                <label class="switch btn-color-mode-switch">
+                    <input value="1" id="color_mode" name="color_mode" type="checkbox" onchange="langaugeRel()">
+                    <label class="btn-color-mode-switch-inner" data-off="EN" data-on="AR" for="color_mode" ></label>
+                </label>
+            
+        </div></div>
+        <div class="content">
+
+            <div class="stick-man">
+                <div class="container">
+                    <div id="stick1" class="stick1 border-right-light">
+                        <div id="base" class="base background-light"></div>
+                    </div>
+                    <div id="stick2" class="stick2 border-top-light display-none ">
+                        <div id="small-stick" class="small-stick border-right-light display-none "></div>
+                    </div>
+                    <div class="stick-man-content ">
+                        <div id="head-border" class="head-border border-dotted-light display-none "></div>
+                        <div id="head" class="head border-solid-light display-none "></div>
+                        <div id="body" class="body background-light display-none "></div>
+                        <div id="hand1" class="hands hand1 background-light display-none "></div>
+                        <div id="hand2" class="hands hand2 background-light display-none "></div>
+                        <div id="leg1" class="legs leg1 background-light display-none "></div>
+                        <div id="leg2" class="legs leg2 background-light display-none "></div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div id="winnig" class="winning">Be Aware!</div>
+            </div>
+            <div class="letters">
+                <div id="category-div" class="category">
+                    There is a word has been generated. <br>
+                    Try to guess what is it!
+                    <br>
+                    <label for="category">Category :</label>
+                    <select name="category" id="category" onchange="categoryRel()">
+                        <option class="options" value="fruits">Fruits and vegetables</option>
+                        <option class="options" value="names">Arabic Names</option>
+                        <option class="options" value="countries">Countries and cities</option>
+                        <option class="options" value="more">More...</option>
+                    </select> 
+                </div>
+                <div class="line"></div>
+                <div id="letters-en" class="letters-en">
+                    <div id="letteren1" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">A</div>
+                    <div id="letteren2" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">B</div>
+                    <div id="letteren3" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">C</div>
+                    <div id="letteren4" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">D</div>
+                    <div id="letteren5" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">E</div>
+                    <div id="letteren6" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">F</div>
+                    <div id="letteren7" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">G</div>
+                    <div id="letteren8" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">H</div>
+                    <div id="letteren9" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">I</div>
+                    <div id="letteren10" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">J</div>
+                    <div id="letteren11" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">K</div>
+                    <div id="letteren12" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">L</div>
+                    <div id="letteren13" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">M</div>
+                    <div id="letteren14" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">N</div>
+                    <div id="letteren15" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">O</div>
+                    <div id="letteren16" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">P</div>
+                    <div id="letteren17" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">Q</div>
+                    <div id="letteren18" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">R</div>
+                    <div id="letteren19" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">S</div>
+                    <div id="letteren20" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">T</div>
+                    <div id="letteren21" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">U</div>
+                    <div id="letteren22" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">V</div>
+                    <div id="letteren23" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">W</div>
+                    <div id="letteren24" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">X</div>
+                    <div id="letteren25" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">Y</div>
+                    <div id="letteren26" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">Z</div>
+                </div>
+                <div id="letters-ar" class="letters-ar display-none">
+                    <div id="letterar1" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ا</div>
+                    <div id="letterar2" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ب</div>
+                    <div id="letterar3" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ت</div>
+                    <div id="letterar4" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ث</div>
+                    <div id="letterar5" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ج</div>
+                    <div id="letterar6" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ح</div>
+                    <div id="letterar7" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">خ</div>
+                    <div id="letterar8" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">د</div>
+                    <div id="letterar9" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ذ</div>
+                    <div id="letterar10" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ر</div>
+                    <div id="letterar11" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ز</div>
+                    <div id="letterar12" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">س</div>
+                    <div id="letterar13" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ش</div>
+                    <div id="letterar14" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ص</div>
+                    <div id="letterar15" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ض</div>
+                    <div id="letterar16" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ط</div>
+                    <div id="letterar17" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ظ</div>
+                    <div id="letterar18" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ع</div>
+                    <div id="letterar19" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">غ</div>
+                    <div id="letterar20" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ف</div>
+                    <div id="letterar21" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ق</div>
+                    <div id="letterar22" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ك</div>
+                    <div id="letterar23" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ل</div>
+                    <div id="letterar24" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">م</div>
+                    <div id="letterar25" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ن</div>
+                    <div id="letterar26" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ه</div>
+                    <div id="letterar27" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">و</div>
+                    <div id="letterar28" class="letter" onclick="include(this.innerHTML,this.id),colorDisable(this.id)">ي</div>
+                </div>
+                <div id="theword" class="word"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
